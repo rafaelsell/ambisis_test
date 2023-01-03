@@ -16,8 +16,9 @@ class _DashboardESGState extends State<DashboardESG> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          foregroundColor: Colors.black,
-          backgroundColor: Colors.white,
+          foregroundColor: Theme.of(context).primaryColorDark,
+          backgroundColor: Theme.of(context).primaryColorLight,
+          surfaceTintColor: Theme.of(context).primaryColorLight,
           toolbarHeight: 80,
           elevation: 0,
           title: const Text('Dashboard ESG'),
@@ -41,50 +42,47 @@ class _DashboardESGState extends State<DashboardESG> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Container(
-            color: const Color(0xffD6D6D8),
-            child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
-              child: Column(
-                children: const [
-                  Filter(),
-                  SizedBox(
-                    height: 18.0,
-                  ),
-                  Barchart(),
-                  SizedBox(
-                    height: 18.0,
-                  ),
-                  CardChart(
-                    title: 'Ambiental',
-                    amountValue: 20,
-                    cardIcon: Icons.forest_outlined,
-                    completedValue: 1,
-                    progressState: 0.1,
-                  ),
-                  SizedBox(
-                    height: 18.0,
-                  ),
-                  CardChart(
-                    title: 'Social',
-                    amountValue: 15,
-                    cardIcon: Icons.people_outlined,
-                    completedValue: 6,
-                    progressState: 0.3,
-                  ),
-                  SizedBox(
-                    height: 18.0,
-                  ),
-                  CardChart(
-                    title: 'Governança',
-                    amountValue: 60,
-                    cardIcon: Icons.business_sharp,
-                    completedValue: 59,
-                    progressState: 0.90,
-                  ),
-                ],
-              ),
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18.0),
+            child: Column(
+              children: const [
+                Filter(),
+                SizedBox(
+                  height: 18.0,
+                ),
+                Barchart(),
+                SizedBox(
+                  height: 18.0,
+                ),
+                CardChart(
+                  title: 'Ambiental',
+                  amountValue: 20,
+                  cardIcon: Icons.forest_outlined,
+                  completedValue: 1,
+                  progressState: 0.1,
+                ),
+                SizedBox(
+                  height: 18.0,
+                ),
+                CardChart(
+                  title: 'Social',
+                  amountValue: 15,
+                  cardIcon: Icons.people_outlined,
+                  completedValue: 6,
+                  progressState: 0.3,
+                ),
+                SizedBox(
+                  height: 18.0,
+                ),
+                CardChart(
+                  title: 'Governança',
+                  amountValue: 60,
+                  cardIcon: Icons.business_sharp,
+                  completedValue: 59,
+                  progressState: 0.90,
+                ),
+              ],
             ),
           ),
         ));
