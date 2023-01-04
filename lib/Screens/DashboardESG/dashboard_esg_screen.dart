@@ -70,7 +70,7 @@ class _DashboardESGState extends State<DashboardESG> {
                   amountValue: 15,
                   cardIcon: Icons.people_outlined,
                   completedValue: 6,
-                  progressState: 0.3,
+                  progressState: 0.5,
                 ),
                 SizedBox(
                   height: 18.0,

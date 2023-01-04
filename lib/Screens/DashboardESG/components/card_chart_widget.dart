@@ -1,3 +1,4 @@
+import 'package:ambisis_test/Screens/DashboardESG/utils/linear_gradient_progressbar.dart';
 import 'package:flutter/material.dart';
 
 class CardChart extends StatefulWidget {
@@ -24,9 +25,9 @@ class _CardChartState extends State<CardChart> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.all(
+      decoration: BoxDecoration(
+        color: Theme.of(context).primaryColorLight,
+        borderRadius: const BorderRadius.all(
           Radius.circular(18),
         ),
       ),
@@ -40,14 +41,18 @@ class _CardChartState extends State<CardChart> {
                 Icon(
                   widget.cardIcon,
                   size: 32.0,
+                  color: Theme.of(context).primaryColorDark,
                 ),
                 const SizedBox(
                   width: 8.0,
                 ),
                 Text(
                   widget.title,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w800, fontSize: 18.0),
+                  style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 16.0,
+                      color: Theme.of(context).primaryColorDark,
+                      letterSpacing: 1),
                 ),
                 const Spacer(),
                 Column(
@@ -56,14 +61,18 @@ class _CardChartState extends State<CardChart> {
                   children: [
                     RichText(
                       text: TextSpan(
-                        style: const TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                            color: Theme.of(context).primaryColorDark),
                         text: 'Total: ',
                         children: [
                           TextSpan(
                             text: widget.amountValue.toString(),
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontWeight: FontWeight.w900,
-                                color: Colors.green),
+                                color: Theme.of(context).primaryColor,
+                                letterSpacing: 0.8),
                           ),
                         ],
                       ),
@@ -73,14 +82,19 @@ class _CardChartState extends State<CardChart> {
                     ),
                     RichText(
                       text: TextSpan(
-                        style: const TextStyle(fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                          color: Theme.of(context).primaryColorDark,
+                        ),
                         text: 'Completado: ',
                         children: [
                           TextSpan(
                             text: widget.completedValue.toString(),
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontWeight: FontWeight.w900,
-                                color: Colors.green),
+                                color: Theme.of(context).primaryColor,
+                                letterSpacing: 0.8),
                           )
                         ],
                       ),
@@ -92,16 +106,8 @@ class _CardChartState extends State<CardChart> {
             const SizedBox(
               height: 18.0,
             ),
-            ClipRRect(
-              borderRadius: const BorderRadius.all(
-                Radius.circular(18),
-              ),
-              child: LinearProgressIndicator(
-                value: widget.progressState,
-                minHeight: 15,
-                color: Colors.green,
-                backgroundColor: const Color.fromARGB(10, 4, 74, 58),
-              ),
+            LinearGradientProgressBar(
+              progressValue: widget.progressState!,
             )
           ],
         ),
