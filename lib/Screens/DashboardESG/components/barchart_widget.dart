@@ -16,10 +16,19 @@ class _BarchartState extends State<Barchart> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(text),
+          Text(
+            text,
+            style: TextStyle(
+                color: Theme.of(context).secondaryHeaderColor,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0.5),
+          ),
           Text(
             value.toString(),
-            style: const TextStyle(color: Colors.green),
+            style: TextStyle(
+                color: Theme.of(context).primaryColor,
+                fontWeight: FontWeight.w900,
+                letterSpacing: 1),
           ),
         ],
       ),
@@ -43,9 +52,10 @@ class _BarchartState extends State<Barchart> {
           children: [
             Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.analytics_outlined,
                   size: 32.0,
+                  color: Theme.of(context).primaryColorDark,
                 ),
                 const SizedBox(
                   width: 8.0,
@@ -55,7 +65,14 @@ class _BarchartState extends State<Barchart> {
                   style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18.0),
                 ),
                 const Spacer(),
-                const Text('Regular'),
+                Text(
+                  'Regular',
+                  style: TextStyle(
+                      color: Theme.of(context).primaryColorDark,
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 0.5),
+                ),
                 const SizedBox(
                   width: 8.0,
                 ),
@@ -63,7 +80,14 @@ class _BarchartState extends State<Barchart> {
                   height: 14.0,
                   width: 14.0,
                   decoration: const BoxDecoration(
-                    color: Colors.green,
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: <Color>[
+                        Color.fromARGB(255, 12, 167, 131),
+                        Color.fromARGB(255, 4, 74, 58),
+                      ],
+                    ),
                     borderRadius: BorderRadius.all(
                       Radius.circular(100.00),
                     ),
@@ -76,11 +100,12 @@ class _BarchartState extends State<Barchart> {
             ),
             Container(
               height: 2.0,
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(18),
-                  ),
-                  color: Color.fromARGB(47, 68, 68, 68)),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(18),
+                ),
+                color: Theme.of(context).unselectedWidgetColor,
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,50 +117,55 @@ class _BarchartState extends State<Barchart> {
                 Container(
                   width: 2.0,
                   height: 48.0,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(18),
-                      ),
-                      color: Color.fromARGB(47, 68, 68, 68)),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                    color: Theme.of(context).unselectedWidgetColor,
+                  ),
                 ),
                 customTextStats(text: 'Total', value: '95'),
                 Container(
                   width: 2.0,
                   height: 48.0,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(18),
-                      ),
-                      color: Color.fromARGB(47, 68, 68, 68)),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                    color: Theme.of(context).unselectedWidgetColor,
+                  ),
                 ),
                 customTextStats(text: 'Média', value: '2.1'),
                 Container(
                   width: 2.0,
                   height: 48.0,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(18),
-                      ),
-                      color: Color.fromARGB(47, 68, 68, 68)),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                    color: Theme.of(context).unselectedWidgetColor,
+                  ),
                 ),
                 customTextStats(text: 'Concluídas', value: '66'),
                 Container(
                   width: 2.0,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(18),
-                      ),
-                      color: Color.fromARGB(47, 68, 68, 68)),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                    color: Theme.of(context).unselectedWidgetColor,
+                  ),
                 ),
               ],
             ),
             Container(
               height: 2.0,
-              decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(18),
-                  ),
-                  color: Color.fromARGB(47, 68, 68, 68)),
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(18),
+                ),
+                color: Theme.of(context).unselectedWidgetColor,
+              ),
             ),
             const SizedBox(
               height: 18.0,
@@ -174,7 +204,14 @@ class _BarchartState extends State<Barchart> {
                             BarChartRodData(
                               width: 18.0,
                               toY: data.y,
-                              color: Colors.green,
+                              gradient: const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: <Color>[
+                                  Color.fromARGB(255, 12, 167, 131),
+                                  Color.fromARGB(255, 4, 74, 58),
+                                ],
+                              ),
                               borderRadius:
                                   const BorderRadius.all(Radius.circular(8)),
                             ),

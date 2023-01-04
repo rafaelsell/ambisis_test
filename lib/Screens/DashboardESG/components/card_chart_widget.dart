@@ -49,10 +49,10 @@ class _CardChartState extends State<CardChart> {
                 Text(
                   widget.title,
                   style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 16.0,
-                      color: Theme.of(context).primaryColorDark,
-                      letterSpacing: 1),
+                    fontWeight: FontWeight.w800,
+                    fontSize: 18.0,
+                    color: Theme.of(context).primaryColorDark,
+                  ),
                 ),
                 const Spacer(),
                 Column(

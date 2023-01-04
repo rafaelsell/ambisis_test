@@ -16,12 +16,19 @@ class _DashboardESGState extends State<DashboardESG> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          titleSpacing: 5,
           foregroundColor: Theme.of(context).primaryColorDark,
           backgroundColor: Theme.of(context).primaryColorLight,
           surfaceTintColor: Theme.of(context).primaryColorLight,
-          toolbarHeight: 80,
-          elevation: 0,
-          title: const Text('Dashboard ESG'),
+          centerTitle: true,
+          toolbarHeight: 60.0,
+          title: Text(
+            'Dashboard ESG',
+            style: TextStyle(
+                color: Theme.of(context).primaryColorDark,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w900),
+          ),
           actions: [
             IconButton(
               onPressed: () => {},

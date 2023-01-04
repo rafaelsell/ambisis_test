@@ -155,12 +155,21 @@ class _FilterState extends State<Filter> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Filter',
-              style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 22.0,
-                  letterSpacing: 1),
+            Row(
+              children: [
+                Icon(
+                  Icons.filter_alt_outlined,
+                  size: 32.0,
+                  color: Theme.of(context).primaryColorDark,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                const Text(
+                  'Filter',
+                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18.0),
+                ),
+              ],
             ),
             const SizedBox(height: 12.0),
             SizedBox(
