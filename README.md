@@ -1,16 +1,36 @@
-# ambisis_test
+# Processo Seletivo - Etapa 2 - Frontend Dev. Ambisis
 
-A new Flutter project.
+Este projeto faz parte do processo seletivo para desenvolvedor
+frontend na empresa [Ambisis](https://www.ambisis.com.br).
+Esta pequena aplicação de apenas uma tela tem como objetivo principal demonstrar minhas habilidades como desenvolvedor frontend. Esta não é uma aplicação com finalidade real.
 
-## Getting Started
+Este projeto é baseado no protótipo criado na primeira etapa do processo seletivo. Fique a vontade para visitá-lo [aqui](https://www.figma.com/file/GpQHov7ioMTnOpLhXlXyAr/LeetCode---Ambisis?node-id=0%3A1&t=UHKl4fMadwQoeEPx-1).
 
-This project is a starting point for a Flutter application.
+## Iniciando a aplicação
 
-A few resources to get you started if this is your first Flutter project:
+Este é projeto desenvolvido em Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Caso você já tenha flutter configurado no seu computador, por favor siga os passos abaixo:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Abra o projeto no seu Editor de código favorito.
+- Abra seu terminal e digite os comandos abaixo:
+
+/// Para verificar se sua instalação do Flutter está pronta para uso
+
+flutter doctor
+
+/// Para iniciar a aplicação
+
+flutter run -d chrome
+
+/// Note que este projeto foi desenvolvido para web/chrome, em um monitor com resolução 1920x1080, com o navegador em modo janela,
+usando a menor tamanho da janela na horizontal, e o tamanho total na horizontal. Deste modo pode haver alguns problemas de responsividade caso seja executado em outros formatos.
+
+Caso você não tenha flutter instalado em sua máquina, por favor siga os passos de instalação [aqui](https://docs.flutter.dev/).
+
+## Recursos
+
+- Uma barra de navegação superior,
+- Uma tela com resumo das estatísticas filtradas por data,
+- Um gráfico de barra comparativo,
+- Barras de progresso separados por segmento.

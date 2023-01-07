@@ -21,7 +21,7 @@ class _DashboardESGState extends State<DashboardESG> {
           backgroundColor: Theme.of(context).primaryColorLight,
           surfaceTintColor: Theme.of(context).primaryColorLight,
           centerTitle: true,
-          toolbarHeight: 60.0,
+          toolbarHeight: 70.0,
           title: Text(
             'Dashboard ESG',
             style: TextStyle(
@@ -30,17 +30,30 @@ class _DashboardESGState extends State<DashboardESG> {
                 fontWeight: FontWeight.w900),
           ),
           actions: [
-            IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.cloud),
-            ),
-            IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.chat),
-            ),
-            IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.menu),
+            Padding(
+              padding: const EdgeInsets.only(right: 18.0),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () => {},
+                    icon: const Icon(Icons.cloud_outlined),
+                  ),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  IconButton(
+                    onPressed: () => {},
+                    icon: const Icon(Icons.chat_bubble_outline),
+                  ),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  IconButton(
+                    onPressed: () => {},
+                    icon: const Icon(Icons.menu),
+                  ),
+                ],
+              ),
             ),
           ],
           leading: IconButton(
