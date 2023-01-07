@@ -14,17 +14,16 @@ Caso você já tenha flutter configurado no seu computador, por favor siga os pa
 
 - Abra o projeto no seu Editor de código favorito.
 - Abra seu terminal e digite os comandos abaixo:
-
     - Para verificar se sua instalação do Flutter está pronta para uso:
 
-flutter doctor
+          flutter doctor
 
-    -Para iniciar a aplicação:
+    - Para iniciar a aplicação:
 
-flutter run -d chrome
+          flutter run -d chrome
 
-  Note que este projeto foi desenvolvido para web/chrome, em um monitor com resolução 1920x1080, com o navegador em modo janela,
-usando a menor tamanho da janela na horizontal, e o tamanho total na horizontal. Deste modo pode haver alguns problemas de responsividade caso seja executado em outros formatos.
+  Note que este projeto foi desenvolvido para web/chrome, em um monitor com resolução 1920x1080px, com o navegador em modo janela,
+usando a menor tamanho da janela na horizontal, e o tamanho total na vertical. Deste modo pode haver alguns problemas de responsividade caso seja executado em outros formatos ou dispositivos.
 
 - Caso você não tenha flutter instalado em sua máquina, por favor siga os passos de instalação [aqui](https://docs.flutter.dev/).
 
