@@ -12,8 +12,11 @@ Este é projeto desenvolvido em Flutter.
 
 Caso você já tenha flutter configurado no seu computador, por favor siga os passos abaixo:
 
+- Use seu terminal para clonar este repositório com Git
+
+          git clone https://github.com/rafaelsell/ambisis_test.git
+          
 - Abra o projeto no seu Editor de código favorito.
-- Abra seu terminal e digite os comandos abaixo:
 
 - Verifique se sua instalação está pronta para uso
 
