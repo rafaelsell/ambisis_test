@@ -14,11 +14,32 @@ Caso você já tenha flutter configurado no seu computador, por favor siga os pa
 
 - Abra o projeto no seu Editor de código favorito.
 - Abra seu terminal e digite os comandos abaixo:
-    - Para verificar se sua instalação do Flutter está pronta para uso:
+
+- Verifique se sua instalação está pronta para uso
 
           flutter doctor
+          
+- Verifique se a versão da sua instalação é igual ou superior a **( Channel stable, 3.3.10 )**.
 
-    - Para iniciar a aplicação:
+Este projeto usa algumas dependencias externas, confira os pacotes e versões do mesmo abaixo:
+
+- [Google Fonts](https://pub.dev/packages/google_fonts):
+
+          google_fonts: ^3.0.1
+            
+- [INTL](https://pub.dev/packages/intl):
+
+          intl: ^0.18.0
+            
+- [FL_Chart](https://pub.dev/packages/fl_chart):
+
+          fl_chart: ^0.55.2
+
+- Tenha certeza de instalar as dependências nas suas respectivas versões com o comando:
+
+          flutter pub get
+
+- Para iniciar a aplicação:
 
           flutter run -d chrome
 
